@@ -8,7 +8,7 @@ import os
 # import pyaudio
 # import random
 import definefunctions as defu
-import speech_recognition as s
+#import speech_recognition as s
 # from _datetime import datetime
 # import time
 names = 'kavya'
@@ -87,32 +87,7 @@ while True:
             cv2.putText(img, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_COMPLEX, 1, (255, 255, 255), 1)
             defu.markAttendance(name)
         else:
-            # with s.Microphone() as m:
-            #     print('say your name')
-            #     audio = sr.listen(m)
-            #     print("loding.........")
-            #     queary = sr.recognize_google(audio, language='eng-in')
-            #
-            #     print(queary)
-            # # wo1 = random.randint(1, 88)
-            # # wo = str(wo1)
-            #     print('Right name So say "yes" \n otherwise say "NO" ')
-            #     time.sleep(1)
-            # sr = s.Recognizer()
-            # with s.Microphone() as source1:
-            #     audio1 = sr.listen(source1)
-            # if 'yes' or 'yesh' in sr.recognize_google(audio1, language='eng-in'):
-            #     names = queary
-            # elif 'no' or 'noo' in sr.recognize_google(audio1, language='eng-in'):
-            #     print("say name again")
-            #     r1 = s.Recognizer()
-            #     with s.Microphone() as source2:
-            #         nam = r1.listen(source2)
-            #         print(nam)
-            #         names = nam
-            #         print("that name is saved")
-            # else:
-            #     continue
+            
             for (x, y, w, h) in faces:
                 # print(x,y,w,h)
                 roi_gray = gray[y:y + h, x:x + w]  # (ycord_start, ycord_end)
